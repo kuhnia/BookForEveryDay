@@ -11,6 +11,7 @@ namespace BookForEveryDay.Controllers
 {
     public class HomeController : Controller
     {
+        WorkWithDB db = new WorkWithDB();
         private readonly ILogger<HomeController> _logger;
 
         public HomeController(ILogger<HomeController> logger)
@@ -20,6 +21,21 @@ namespace BookForEveryDay.Controllers
 
         public IActionResult Index()
         {
+            WorkWithDB db = new WorkWithDB();
+            db.AddUser();
+            return View();
+        }
+
+        [HttpGet]
+        public IActionResult Create()
+        {
+
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Create(string fn, string ln, string dob, string r, string d, string s, string p)
+        {
+            db.AddUser(fn, ln, dob, r, d, s, p);
             return View();
         }
 
