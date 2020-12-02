@@ -22,7 +22,6 @@ namespace BookForEveryDay.Controllers
         public IActionResult Index()
         {
             WorkWithDB db = new WorkWithDB();
-            db.AddUser();
             return View();
         }
 
@@ -39,10 +38,25 @@ namespace BookForEveryDay.Controllers
             return View();
         }
 
+        [HttpGet]
+        public IActionResult Remove()
+        {
+            db.RemoveUser(1);
+            return View("index");
+        }
+        [HttpPost]
+        public IActionResult Remove(int id)
+        {
+            db.RemoveUser(id);
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();
         }
+
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

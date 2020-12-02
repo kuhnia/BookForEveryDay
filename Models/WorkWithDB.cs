@@ -18,8 +18,33 @@ namespace BookForEveryDay.Models
                 string command = $@"insert into Users values('{fn}', '{ln}', '{dob}', '{r}', '{d}', '{s}', '{p}')";
                 SqlCommand sc = new SqlCommand(command, connection);
                 sc.ExecuteNonQuery();
+                return true;
+                
             }
-            return false;
+        }
+
+        public bool RemoveUser(int id)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                string command = $@"delete from Users where id = '{id}'";
+                SqlCommand sc = new SqlCommand(command, connection);
+                sc.ExecuteNonQuery();
+                return true;
+            }
+        }
+
+        public bool GetUsers(int id)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                string command = $@"delete from Users where id = '{id}'";
+                SqlCommand sc = new SqlCommand(command, connection);
+                sc.ExecuteNonQuery();
+                return true;
+            }
         }
     }
 }
