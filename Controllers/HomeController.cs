@@ -22,7 +22,7 @@ namespace BookForEveryDay.Controllers
         public IActionResult Index()
         {
             WorkWithDB db = new WorkWithDB();
-            db.AddUser();
+            //db.AddUser();
             return View();
         }
 

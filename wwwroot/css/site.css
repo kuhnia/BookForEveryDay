@@ -1,14 +1,14 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
-a.navbar-brand {
+/*a.navbar-brand {
   white-space: normal;
   text-align: center;
   word-break: break-all;
-}
+}*/
 
 /* Provide sufficient contrast against white background */
-a {
+/*a {
   color: #0366d6;
 }
 
@@ -22,11 +22,11 @@ a {
   color: #fff;
   background-color: #1b6ec2;
   border-color: #1861ac;
-}
+}*/
 
 /* Sticky footer styles
 -------------------------------------------------- */
-html {
+/*html {
   font-size: 14px;
 }
 @media (min-width: 768px) {
@@ -49,23 +49,138 @@ html {
 button.accept-policy {
   font-size: 1rem;
   line-height: inherit;
-}
+}*/
 
 /* Sticky footer styles
 -------------------------------------------------- */
-html {
+/*html {
   position: relative;
   min-height: 100%;
 }
 
-body {
+body {*/
   /* Margin bottom by footer height */
-  margin-bottom: 60px;
+  /*margin-bottom: 60px;
 }
 .footer {
   position: absolute;
   bottom: 0;
   width: 100%;
   white-space: nowrap;
-  line-height: 60px; /* Vertically center the text there */
+  line-height: 60px;*/ /* Vertically center the text there */
+/*}*/
+
+
+.background_employee {
+    background-image: url(https://cs7.pikabu.ru/post_img/big/2017/12/23/11/151405220014558883.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+/*----------------------------------*/
+
+.new_employee {
+    margin: 20px 700px 20px 700px;
+}
+
+/*----------------------------------*/
+
+input[type="text"].text_input {
+    background: transparent;
+    border: 1px solid #000000;
+    padding: 5px 5px;
+    border-color: cyan;
+    border-radius: 2px;
+    color: white;
+}
+
+input[type="text"].next_text_input {
+    background: transparent;
+    border: 1px solid #000000;
+    padding: 5px 5px;
+    border-color: cyan;
+    border-radius: 2px;
+    color: white;
+}
+/*----------------------------------*/
+
+.text_style {
+    color: steelblue;
+    text-align: center;
+    font-family: 'Microsoft Sans Serif';
+    font-size: 20px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.text_area {
+    display: inline-block;
+    margin: 10px 0px 0px 0px;
+    width: 500px;
+    height: 650px;
+    position: absolute;
+}
+
+.info {
+    display: inline-block;
+    margin: 10px 0px 0px 0px;
+    width: 500px;
+    height: 650px;
+    position: relative;
+}
+/*----------------------------------*/
+.id_employee_label {
+    margin: 10px 50px 0px 10px;
+    padding: 5px;
+}
+
+.f_name_employee_label {
+    margin: 0px 152px 5px 10px;
+    padding: 5px;
+}
+
+.l_name_employee_label {
+    margin: 0px 95px 5px 10px;
+    padding: 5px;
+}
+
+.b_day_employee_label {
+    margin: 0px 15px 5px 10px;
+    padding: 5px;
+}
+
+.role_employee_label {
+    margin: 0px 144px 5px 10px;
+    padding: 5px;
+}
+
+.department_employee_label {
+    margin: 0px 135px 5px 10px;
+    padding: 5px;
+}
+
+.status_employee_label {
+    margin: 0px 130px 5px 10px;
+    padding: 5px;
+}
+
+.position_employee_label {
+    margin: 0px 128px 5px 10px;
+    padding: 5px;
+}
+/*----------------------------------*/
+.create {
+    margin: 0px 0px 10px 10px
+}
+
+.coment_label {
+    margin: 10px 0px 0px 150px;
+}
+
+.area_text {
+    height: 460px;
+    width: 400px;
+    border: 1px solid double;
+    border-radius: 2px;
 }

@@ -1,8 +1,55 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "BookForEveryDay";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<form method="post" action="~/home/Index">
+    <div class="background_employee">
+        <div>
+            <label class="new_employee" name="n_e"><font class="text_style">Новий працівник</font></label>
+            <br /><br />
+
+            <div class="info">
+                <label class="id_employee_label"><font class="text_style">ID працівника</font></label>
+                <input class="text_input" type="text" />
+                <br /><br />
+
+                <label class="f_name_employee_label"><font class="text_style">Імя</font></label>
+                <input class="next_text_input" type="text" />
+                <br /><br />
+
+                <label class="l_name_employee_label"><font class="text_style">Прізвище</font></label>
+                <input class="next_text_input" type="text" />
+                <br /><br />
+
+                <label class="b_day_employee_label"><font class="text_style">Дата народження</font></label>
+                <input class="next_text_input" type="text" />
+                <br /><br />
+
+                <label class="role_employee_label"><font class="text_style">Роль</font></label>
+                <input class="next_text_input" type="text" />
+                <br /><br />
+
+                <label class="department_employee_label"><font class="text_style">Відділ</font></label>
+                <input class="next_text_input" type="text" />
+                <br /><br />
+
+                <label class="status_employee_label"><font class="text_style">Статус</font></label>
+                <input class="next_text_input" type="text" />
+                <br /><br />
+
+                <label class="position_employee_label"><font class="text_style">Посада</font></label>
+                <input class="next_text_input" type="text" />
+                <br /><br />
+
+            </div>
+
+            <div class="text_area">
+                <label class="coment_label"><font class="text_style">Коментарі</font></label>
+                <br /><br />
+                <textarea class="area_text"></textarea>
+            </div>
+        </div>
+        <input class="create" type="submit" value="Додати" />
+    </div>
+
+</form>
