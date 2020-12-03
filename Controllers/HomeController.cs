@@ -21,14 +21,13 @@ namespace BookForEveryDay.Controllers
 
         public IActionResult Index()
         {
-            WorkWithDB db = new WorkWithDB();
+
             return View();
         }
 
         [HttpGet]
         public IActionResult Create()
         {
-
             return View();
         }
         [HttpPost]
@@ -41,7 +40,6 @@ namespace BookForEveryDay.Controllers
         [HttpGet]
         public IActionResult Remove()
         {
-            db.RemoveUser(1);
             return View("index");
         }
         [HttpPost]
