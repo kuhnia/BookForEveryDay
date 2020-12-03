@@ -38,12 +38,12 @@ namespace BookForEveryDay.Models
         public User GetUsers(int Id)
         {
             string sqlExpression = "SELECT * FROM Users";
+                User user = null;
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
                 SqlCommand command = new SqlCommand(sqlExpression, connection);
                 SqlDataReader reader = command.ExecuteReader();
-
                 if (reader.HasRows) // если есть данные
                 {
                     // выводим названия столбцов
@@ -57,12 +57,12 @@ namespace BookForEveryDay.Models
                         object Department = reader.GetValue(5);
                         object Status = reader.GetValue(6);
                         object Position = reader.GetValue(7);
-                    User user = new User((int)id, FirstName.ToString(), LastName.ToString(), DayOfBirthsday.ToString(), Role.ToString(), Department.ToString(), Status.ToString(), Position.ToString());
+                        user = new User((int)id, FirstName.ToString(), LastName.ToString(), DayOfBirthsday.ToString(), Role.ToString(), Department.ToString(), Status.ToString(), Position.ToString());
                 }
                 reader.Close();
-                    return user;
 
             }
+                    return user;
         }
     }
 }
