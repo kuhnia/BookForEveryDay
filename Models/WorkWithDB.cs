@@ -35,34 +35,69 @@ namespace BookForEveryDay.Models
             }
         }
 
-        public User GetUsers(int Id)
+        public List<User> GetUsers()
         {
             string sqlExpression = "SELECT * FROM Users";
+                List<User> users = new List<User>();
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
                 SqlCommand command = new SqlCommand(sqlExpression, connection);
                 SqlDataReader reader = command.ExecuteReader();
-
                 if (reader.HasRows) // если есть данные
                 {
                     // выводим названия столбцов
                     //Console.WriteLine("{0}\t{1}\t{2}", reader.GetName(0), reader.GetName(1), reader.GetName(2));
-
+                    while (reader.Read()) // построчно считываем данные
+                    {
                         object id = reader.GetValue(0);
-                        object FirstName= reader.GetValue(1);
+                        object FirstName = reader.GetValue(1);
                         object LastName = reader.GetValue(2);
                         object DayOfBirthsday = reader.GetValue(3);
                         object Role = reader.GetValue(4);
                         object Department = reader.GetValue(5);
                         object Status = reader.GetValue(6);
                         object Position = reader.GetValue(7);
-                    //User user = new User((int)id, FirstName.ToString(), LastName.ToString(), DayOfBirthsday.ToString(), Role.ToString(), Department.ToString(), Status.ToString(), Position.ToString());
+                        User user = new User((int)id, FirstName.ToString(), LastName.ToString(), DayOfBirthsday.ToString(), Role.ToString(), Department.ToString(), Status.ToString(), Position.ToString());
+                        users.Add(user);
+                    }
                 }
                 reader.Close();
-                    return null;
 
             }
+                    return users;
+        }
+        public User GetUser(int Id)
+        {
+            string sqlExpression = $"SELECT * FROM Users where id = '{Id}'";
+            User user = null;
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand(sqlExpression, connection);
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.HasRows) // если есть данные
+                {
+                    // выводим названия столбцов
+                    //Console.WriteLine("{0}\t{1}\t{2}", reader.GetName(0), reader.GetName(1), reader.GetName(2));
+                    
+                        object id = reader.GetValue(0);
+                        object FirstName = reader.GetValue(1);
+                        object LastName = reader.GetValue(2);
+                        object DayOfBirthsday = reader.GetValue(3);
+                        object Role = reader.GetValue(4);
+                        object Department = reader.GetValue(5);
+                        object Status = reader.GetValue(6);
+                        object Position = reader.GetValue(7);
+                        user = new User((int)id, FirstName.ToString(), LastName.ToString(), DayOfBirthsday.ToString(), Role.ToString(), Department.ToString(), Status.ToString(), Position.ToString());
+                        
+                    
+                }
+                reader.Close();
+                    return user;
+
+            }
+            return user;
         }
     }
 }
