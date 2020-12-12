@@ -2,7 +2,7 @@
     ViewData["Title"] = "BookForEveryDay";
 }
 
-<form method="post" action="~/home/Index">
+<form method="post" action="~/home/Create">
     <div class="background_employee">
       
         <div>
@@ -10,36 +10,33 @@
             <br /><br />
 
             <div class="info">
-                <label class="id_employee_label"><font class="text_style">ID працівника</font></label>
-                <input class="text_input" type="text" />
-                <br /><br />
 
                 <label class="f_name_employee_label"><font class="text_style">Імя</font></label>
-                <input class="next_text_input" type="text" />
+                <input name="fn" class="next_text_input" type="text" />
                 <br /><br />
 
                 <label class="l_name_employee_label"><font class="text_style">Прізвище</font></label>
-                <input class="next_text_input" type="text" />
+                <input name="ln" class="next_text_input" type="text" />
                 <br /><br />
 
                 <label class="b_day_employee_label"><font class="text_style">Дата народження</font></label>
-                <input class="next_text_input" type="text" />
+                <input name="dob" class="next_text_input" type="date"/>
                 <br /><br />
 
                 <label class="role_employee_label"><font class="text_style">Роль</font></label>
-                <input class="next_text_input" type="text" />
+                <input name="r" class="next_text_input" type="text" />
                 <br /><br />
 
                 <label class="department_employee_label"><font class="text_style">Відділ</font></label>
-                <input class="next_text_input" type="text" />
+                <input name="d" class="next_text_input" type="text" />
                 <br /><br />
 
                 <label class="status_employee_label"><font class="text_style">Статус</font></label>
-                <input class="next_text_input" type="text" />
+                <input name="s" class="next_text_input" type="text" />
                 <br /><br />
 
                 <label class="position_employee_label"><font class="text_style">Посада</font></label>
-                <input class="next_text_input" type="text" />
+                <input name="p" class="next_text_input" type="text" />
                 <br /><br />
 
             </div>

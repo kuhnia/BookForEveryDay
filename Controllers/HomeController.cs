@@ -34,7 +34,8 @@ namespace BookForEveryDay.Controllers
         public IActionResult Create(string fn, string ln, string dob, string r, string d, string s, string p)
         {
             db.AddUser(fn, ln, dob, r, d, s, p);
-            return View();
+            
+            return View("index");
         }
 
         [HttpGet]

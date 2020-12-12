@@ -15,7 +15,7 @@ namespace BookForEveryDay.Models
             using(SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                string command = $@"insert into Users values('{fn}', '{ln}', '{dob}', '{r}', '{d}', '{s}', '{p}')";
+                string command = $@"insert into Users values('{fn}', '{ln}', '{Convert.ToDateTime(dob).ToString("yyyy-mm-dd")}', '{r}', '{d}', '{s}', '{p}')";
                 SqlCommand sc = new SqlCommand(command, connection);
                 sc.ExecuteNonQuery();
                 return true;
@@ -58,7 +58,7 @@ namespace BookForEveryDay.Models
                         object Department = reader.GetValue(5);
                         object Status = reader.GetValue(6);
                         object Position = reader.GetValue(7);
-                        User user = new User((int)id, FirstName.ToString(), LastName.ToString(), DayOfBirthsday.ToString(), Role.ToString(), Department.ToString(), Status.ToString(), Position.ToString());
+                        User user = new User(Convert.ToInt32(id), FirstName.ToString(), LastName.ToString(), DayOfBirthsday.ToString(), Role.ToString(), Department.ToString(), Status.ToString(), Position.ToString());
                         users.Add(user);
                     }
                 }
