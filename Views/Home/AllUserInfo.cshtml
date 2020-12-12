@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Всі працівники";
+}
+
+<form method="post" action="~/home/AllUserInfo">
+    <div class="background_employee">
+
+        <div>
+
+            <div class="user_info">
+                <select class="all_user_option" name="users">
+                    <option>Всі працівники</option>
+                </select>
+            </div>
+
+            <div class="text_area_user">
+                <label class="info_label"><font class="text_style">Інформація про працівника</font></label>
+                <br /><br />
+                 <input class="user_info_input" type="text" />
+            </div>
+
+        </div>
+
+        <div>
+            <input type="submit" class="back_button" value="Адмін">
+        </div>
+
+    </div>
+</form>

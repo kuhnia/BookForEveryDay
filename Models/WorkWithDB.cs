@@ -94,6 +94,7 @@ namespace BookForEveryDay.Models
                     
                 }
                 reader.Close();
+                    return user;
 
             }
             return user;
