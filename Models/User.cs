@@ -16,9 +16,9 @@ namespace BookForEveryDay.Models
         public string Status;
         public string Position;
 
-        public User(int )
+        /*public User(int )
         {
 
-        }
+        }*/
     }
 }

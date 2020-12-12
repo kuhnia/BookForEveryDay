@@ -57,10 +57,10 @@ namespace BookForEveryDay.Models
                         object Department = reader.GetValue(5);
                         object Status = reader.GetValue(6);
                         object Position = reader.GetValue(7);
-                    User user = new User((int)id, FirstName.ToString(), LastName.ToString(), DayOfBirthsday.ToString(), Role.ToString(), Department.ToString(), Status.ToString(), Position.ToString());
+                    //User user = new User((int)id, FirstName.ToString(), LastName.ToString(), DayOfBirthsday.ToString(), Role.ToString(), Department.ToString(), Status.ToString(), Position.ToString());
                 }
                 reader.Close();
-                    return user;
+                    return null;
 
             }
         }

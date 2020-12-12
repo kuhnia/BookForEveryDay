@@ -19,12 +19,18 @@ namespace BookForEveryDay.Controllers
             _logger = logger;
         }
 
+        [HttpGet]
         public IActionResult Index()
         {
-
             return View();
         }
 
+        [HttpPost]
+        public IActionResult Index(string name)
+        {
+            return View("AllUserInfo");
+        }
+       
         [HttpGet]
         public IActionResult Create()
         {

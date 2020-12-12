@@ -103,8 +103,18 @@ input[type="text"].next_text_input {
     border-radius: 2px;
     color: white;
 }
-/*----------------------------------*/
 
+input[type="text"].user_info_input {
+    background: transparent;
+    border: 1px solid #000000;
+    padding: 5px 5px;
+    border-color: cyan;
+    border-radius: 2px;
+    color:black;
+    height: 600px;
+    width: 300px;
+}
+/*----------------------------------*/
 .text_style {
     color: steelblue;
     text-align: center;
@@ -128,6 +138,22 @@ input[type="text"].next_text_input {
     width: 500px;
     height: 650px;
     position: relative;
+}
+
+.user_info {
+    display: inline-block;
+    position: relative;
+    margin: 10px 0px 0px 0px;
+    width: 500px;
+    height: 650px;
+}
+
+.text_area_user {
+    display: inline-block;
+    margin: 10px 0px 0px 0px;
+    width: 500px;
+    height: 650px;
+    position: absolute;
 }
 /*----------------------------------*/
 .id_employee_label {
@@ -169,6 +195,10 @@ input[type="text"].next_text_input {
     margin: 0px 128px 5px 10px;
     padding: 5px;
 }
+
+.info_label{
+    margin: 10px 0px 0px 0px;
+}
 /*----------------------------------*/
 .create {
     margin: 0px 0px 10px 10px
@@ -178,9 +208,18 @@ input[type="text"].next_text_input {
     margin: 10px 0px 0px 150px;
 }
 
+.back_button{
+    margin: 100px 0px 0px 10px;
+}
+
 .area_text {
     height: 460px;
     width: 400px;
     border: 1px solid double;
     border-radius: 2px;
+}
+
+.all_user_option{
+    margin:10px 0px 0px 10px;
+    padding: 5px;
 }
