@@ -20,6 +20,12 @@ namespace BookForEveryDay.Controllers
         }
 
         [HttpGet]
+        public IActionResult AllUser()
+        {
+            return View("AllUserInfo", db.GetUsers());
+        }
+
+        [HttpGet]
         public IActionResult Index()
         {
             return View();

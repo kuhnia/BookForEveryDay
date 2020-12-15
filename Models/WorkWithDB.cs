@@ -12,12 +12,12 @@ namespace BookForEveryDay.Models
         
         public bool AddUser(string fn, string ln, string dob, string r, string d, string s, string p)
         {
-            using(SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 DateTime time = Convert.ToDateTime(dob);             // Use current time
                 string format = "yyyy-MM-dd HH:mm:ss";    // modify the format depending upon input required in the column in database 
                 connection.Open();
-                string command = $@"insert into Users values('{fn}', '{ln}', '" + time.ToString(format) + "', '{r}', '{d}', '{s}', '{p}')";
+                string command = $@"insert into Users values('{fn}', '{ln}', '{time.ToString(format)} ', '{r}', '{d}', '{s}', '{p}')";
                 SqlCommand sc = new SqlCommand(command, connection);
                 sc.ExecuteNonQuery();
                 return true;
