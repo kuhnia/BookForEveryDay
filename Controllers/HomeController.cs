@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using BookForEveryDay.Models;
+using BookForEveryDay.ViewModel;
 
 namespace BookForEveryDay.Controllers
 {
@@ -22,7 +23,8 @@ namespace BookForEveryDay.Controllers
         [HttpGet]
         public IActionResult AllUser()
         {
-            return View("AllUserInfo", db.GetUsers());
+            UsersViewModel usrs = new UsersViewModel{users = db.GetUsers()};
+            return View("AllUserInfo", usrs);
         }
 
         [HttpGet]

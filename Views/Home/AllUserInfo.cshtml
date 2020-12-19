@@ -2,6 +2,15 @@
     ViewData["Title"] = "Всі працівники";
 }
 
+@model BookForEveryDay.ViewModel.UsersViewModel
+
+@foreach(var item in Model.users)
+{
+    <p>
+        @item.FirstName
+    </p>
+}
+
 <form method="post" action="~/home/AllUserInfo">
     <div class="background_employee">
 
