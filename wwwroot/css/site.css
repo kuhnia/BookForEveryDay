@@ -59,8 +59,8 @@ button.accept-policy {
 }
 
 body {*/
-  /* Margin bottom by footer height */
-  /*margin-bottom: 60px;
+/* Margin bottom by footer height */
+/*margin-bottom: 60px;
 }
 .footer {
   position: absolute;
@@ -101,7 +101,7 @@ input[type="text"].next_text_input {
     padding: 5px 5px;
     border-color: cyan;
     border-radius: 2px;
-    color: white;
+    color: black;
 }
 
 input[type="text"].user_info_input {
@@ -110,7 +110,7 @@ input[type="text"].user_info_input {
     padding: 5px 5px;
     border-color: cyan;
     border-radius: 2px;
-    color:black;
+    color: black;
     height: 600px;
     width: 300px;
 }
@@ -145,7 +145,7 @@ input[type="text"].user_info_input {
     position: relative;
     margin: 10px 0px 0px 0px;
     width: 500px;
-    height: 650px;
+    height: 750px;
 }
 
 .text_area_user {
@@ -196,7 +196,7 @@ input[type="text"].user_info_input {
     padding: 5px;
 }
 
-.info_label{
+.info_label {
     margin: 10px 0px 0px 0px;
 }
 /*----------------------------------*/
@@ -208,8 +208,11 @@ input[type="text"].user_info_input {
     margin: 10px 0px 0px 150px;
 }
 
-.back_button{
-    margin: 100px 0px 0px 10px;
+.user_button {
+    text-decoration: none;
+    padding: 5px;
+    box-shadow: rgba(128, 128, 128, 1) -2px 2px;
+    margin: 0px 0px 0px 10px;
 }
 
 .area_text {
@@ -219,7 +222,7 @@ input[type="text"].user_info_input {
     border-radius: 2px;
 }
 
-.all_user_option{
-    margin:10px 0px 0px 10px;
+.all_user_option {
+    margin: 10px 0px 0px 10px;
     padding: 5px;
 }
