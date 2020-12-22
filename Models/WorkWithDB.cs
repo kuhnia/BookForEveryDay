@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using System.Data.SqlClient;
+using System.Data.SqlClient;//
 
 namespace BookForEveryDay.Models
 {
@@ -100,6 +100,22 @@ namespace BookForEveryDay.Models
 
             }
             return user;
+        }
+
+
+        public User Info_Of_User()
+        {
+            string sqlExpression = $"SELECT * FROM Users";
+            User employee = null;
+            using(SqlConnection connection = new SqlConnection (connectionString))
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand(sqlExpression, connection);
+                SqlDataReader dataReader = command.ExecuteReader();
+
+                //if()
+            }
+            return employee;
         }
     }
 }
