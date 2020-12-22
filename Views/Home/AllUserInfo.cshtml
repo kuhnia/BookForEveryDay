@@ -4,12 +4,7 @@
 
 @model BookForEveryDay.ViewModel.UsersViewModel
 
-@foreach(var item in Model.users)
-{
-    <p>
-        @item.FirstName
-    </p>
-}
+
 
 <form method="post" action="~/home/AllUserInfo">
     <div class="background_employee">
@@ -19,19 +14,26 @@
             <div class="user_info">
                 <select class="all_user_option" name="users">
                     <option>Всі працівники</option>
+                    @foreach (var item in Model.users)
+                    {
+                        <option>
+                            @item.FirstName
+                        </option>
+                    }
                 </select>
             </div>
 
             <div class="text_area_user">
                 <label class="info_label"><font class="text_style">Інформація про працівника</font></label>
                 <br /><br />
-                 <input class="user_info_input" type="text" />
+                <input class="user_info_input" type="text" />
             </div>
 
         </div>
 
         <div>
-            <input type="submit" class="back_button" value="Адмін">
+            @*<input type="submit" class="back_button" value="Адмін">*@
+            <a class="user_button" asp-controller="Home" asp-action="AllUser"><font class="text_style">Переглянути</font></a>
         </div>
 
     </div>

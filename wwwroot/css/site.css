@@ -208,7 +208,7 @@ input[type="text"].user_info_input {
     margin: 10px 0px 0px 150px;
 }
 
-.user_button {
+a.user_button {
     text-decoration: none;
     padding: 5px;
     box-shadow: rgba(128, 128, 128, 1) -2px 2px;

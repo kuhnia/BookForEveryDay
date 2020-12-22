@@ -69,7 +69,10 @@ namespace BookForEveryDay.Controllers
             return View();
         }
 
-
+        //public IActionResult View_info()
+        //{           
+        //    return View();
+        //}
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
