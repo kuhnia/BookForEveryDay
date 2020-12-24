@@ -113,6 +113,7 @@ input[type="text"].user_info_input {
     color: black;
     height: 600px;
     width: 300px;
+    text-align: left;
 }
 
 input[type="password"].next_text_input {
@@ -140,7 +141,7 @@ textarea.area_text {
     border-color: cyan;
     border-radius: 2px;
     color: black;
-    height: 500px;
+    height: 400px;
     width: 400px;
 }
 /*----------------------------------*/
@@ -156,7 +157,7 @@ textarea.area_text {
 .text_area {
     display: inline-block;
     margin: 10px 0px 0px 0px;
-    width: 500px;
+    width: 700px;
     height: 650px;
     position: absolute;
 }
@@ -235,6 +236,16 @@ textarea.area_text {
     padding: 3px;
 }
 
+.Wage_For_Hour {
+    margin: 0px 35px 1px 10px;
+    padding: 3px;
+}
+
+.Wage {
+    margin: 0px 45px 1px 10px;
+    padding: 3px;
+}
+
 .info_label {
     margin: 10px 0px 0px 0px;
 }
@@ -254,12 +265,12 @@ a.user_button {
     margin: 0px 0px 0px 10px;
 }
 
-.area_text {
-    height: 460px;
-    width: 400px;
+/*.area_text {
+    height: 300px;
+    width: 300px;
     border: 1px solid double;
     border-radius: 2px;
-}
+}*/
 
 .all_user_option {
     margin: 10px 0px 0px 10px;
