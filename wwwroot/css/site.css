@@ -114,6 +114,35 @@ input[type="text"].user_info_input {
     height: 600px;
     width: 300px;
 }
+
+input[type="password"].next_text_input {
+    background: transparent;
+    border: 1px solid #000000;
+    padding: 5px 5px;
+    border-color: cyan;
+    border-radius: 2px;
+    color: black;    
+}
+
+input[type="date"].next_text_input {
+    background: transparent;
+    border: 1px solid #000000;
+    padding: 5px 5px;
+    border-color: cyan;
+    border-radius: 2px;
+    color: black;
+}
+
+textarea.area_text {
+    background: transparent;
+    border: 1px solid #000000;
+    padding: 5px 5px;
+    border-color: cyan;
+    border-radius: 2px;
+    color: black;
+    height: 500px;
+    width: 400px;
+}
 /*----------------------------------*/
 .text_style {
     color: steelblue;
@@ -158,42 +187,52 @@ input[type="text"].user_info_input {
 /*----------------------------------*/
 .id_employee_label {
     margin: 10px 50px 0px 10px;
-    padding: 5px;
+    padding: 3px;
 }
 
 .f_name_employee_label {
-    margin: 0px 152px 5px 10px;
-    padding: 5px;
+    margin: 0px 152px 1px 10px;
+    padding: 3px;
 }
 
 .l_name_employee_label {
-    margin: 0px 95px 5px 10px;
-    padding: 5px;
+    margin: 0px 95px 1px 10px;
+    padding: 3px;
 }
 
 .b_day_employee_label {
-    margin: 0px 15px 5px 10px;
-    padding: 5px;
+    margin: 0px 15px 1px 10px;
+    padding: 3px;
 }
 
 .role_employee_label {
-    margin: 0px 144px 5px 10px;
-    padding: 5px;
+    margin: 0px 144px 1px 10px;
+    padding: 3px;
 }
 
 .department_employee_label {
-    margin: 0px 135px 5px 10px;
-    padding: 5px;
+    margin: 0px 135px 1px 10px;
+    padding: 3px;
 }
 
 .status_employee_label {
-    margin: 0px 130px 5px 10px;
-    padding: 5px;
+    margin: 0px 130px 1px 10px;
+    padding: 3px;
 }
 
 .position_employee_label {
-    margin: 0px 128px 5px 10px;
-    padding: 5px;
+    margin: 0px 128px 1px 10px;
+    padding: 3px;
+}
+
+.password_employee_label {
+    margin: 0px 128px 1px 10px;
+    padding: 3px;
+}
+
+.login_employee_label {
+    margin: 0px 150px 1px 10px;
+    padding: 3px;
 }
 
 .info_label {
