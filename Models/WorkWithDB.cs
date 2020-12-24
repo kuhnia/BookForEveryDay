@@ -10,14 +10,14 @@ namespace BookForEveryDay.Models
     {
         static string connectionString = @"Data Source=BookForEveryDayDB.mssql.somee.com;Initial Catalog=BookForEveryDayDB;User ID=Qwertytrewq123_SQLLogin_1;Password=gglxs93hdw;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
         
-        public bool AddUser(string fn, string ln, string dob, string r, string d, string s, string p)
+        public bool AddUser(string fn, string ln, string dob, string r, string d, string s, string p, string l, string pas, int w, int wfh, string dt)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 DateTime time = Convert.ToDateTime(dob);             // Use current time
                 string format = "yyyy-MM-dd HH:mm:ss";    // modify the format depending upon input required in the column in database 
                 connection.Open();
-                string command = $@"insert into Users values('{fn}', '{ln}', '{time.ToString(format)} ', '{r}', '{d}', '{s}', '{p}')";
+                string command = $@"insert into Users values('{fn}', '{ln}', '{time.ToString(format)} ', '{r}', '{d}', '{s}', '{p}', '{l}', '{pas}', '{w}', '{wfh}', '{dt}')";
                 SqlCommand sc = new SqlCommand(command, connection);
                 sc.ExecuteNonQuery();
                 return true;
@@ -60,7 +60,12 @@ namespace BookForEveryDay.Models
                         object Department = reader.GetValue(5);
                         object Status = reader.GetValue(6);
                         object Position = reader.GetValue(7);
-                        User user = new User(Convert.ToInt32(id), FirstName.ToString(), LastName.ToString(), DayOfBirthsday.ToString(), Role.ToString(), Department.ToString(), Status.ToString(), Position.ToString());
+                        object Login = reader.GetValue(8);
+                        object Password = reader.GetValue(9);
+                        object Wage = reader.GetValue(10);
+                        object WageForH = reader.GetValue(11);
+                        object DateTime = reader.GetValue(12);
+                        User user = new User((int)id, FirstName.ToString(), LastName.ToString(), DayOfBirthsday.ToString(), Role.ToString(), Department.ToString(), Status.ToString(), Position.ToString(), Login.ToString(), Password.ToString(), Convert.ToInt32(Wage), Convert.ToInt32(WageForH), DateTime.ToString());
                         users.Add(user);
                     }
                 }
@@ -91,7 +96,12 @@ namespace BookForEveryDay.Models
                         object Department = reader.GetValue(5);
                         object Status = reader.GetValue(6);
                         object Position = reader.GetValue(7);
-                        user = new User((int)id, FirstName.ToString(), LastName.ToString(), DayOfBirthsday.ToString(), Role.ToString(), Department.ToString(), Status.ToString(), Position.ToString());
+                    object Login = reader.GetValue(8);
+                    object Password = reader.GetValue(9);
+                    object Wage = reader.GetValue(10);
+                    object WageForH = reader.GetValue(11);
+                    object DateTime = reader.GetValue(12);
+                    user = new User((int)id, FirstName.ToString(), LastName.ToString(), DayOfBirthsday.ToString(), Role.ToString(), Department.ToString(), Status.ToString(), Position.ToString(), Login.ToString(), Password.ToString(), Convert.ToInt32(Wage), Convert.ToInt32(WageForH), DateTime.ToString());
                         
                     
                 }

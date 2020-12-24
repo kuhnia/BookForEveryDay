@@ -45,9 +45,9 @@ namespace BookForEveryDay.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Create(string fn, string ln, string dob, string r, string d, string s, string p)
+        public IActionResult Create(string fn, string ln, string dob, string r, string d, string s, string p, string l, string pas, int w, int wfh, string dt)
         {
-            db.AddUser(fn, ln, dob, r, d, s, p);
+            db.AddUser(fn, ln, dob, r, d, s, p, l, pas, w, wfh, dt);
             
             return View("index");
         }
