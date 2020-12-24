@@ -112,6 +112,17 @@ namespace BookForEveryDay.Models
             return user;
         }
 
+        public void update(User user)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                string command = @$"UPDATE table_name SET id = {user.id}, FirstName = '{user.FirstName}', LastName'{user.LastName}', DayOfBirthsday = '{user.DayOfBirthsday} ', Role = '{user.Role}', Department = '{user.Department}', Status = '{user.Status}', Position = '{user.Position}', Login = '{user.Login}', Password = '{user.Password}', Wage = '{user.Wage}', WageForH = '{user.WageForH}', DateTime = '{user.DateTime}' WHERE id = {user.id}";
+            SqlCommand sc = new SqlCommand(command, connection);
+            sc.ExecuteNonQuery();
+        }
+    }
+
 
         public User Info_Of_User()
         {
