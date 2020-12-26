@@ -77,6 +77,25 @@ namespace BookForEveryDay.Controllers
             return View(us);
         }
 
+        [HttpPost]
+        public IActionResult UpdateUser(User user, string fn, string ln, string dob, string r, string d, string s, string p, string l, string pas, int w, int wfh, string dt)
+        {
+            user.FirstName = fn;
+            user.LastName = ln;
+            user.DayOfBirthsday = dob;
+            user.Role = r;
+            user.Department = d;
+            user.Status = s;
+            user.Position = p;
+            user.Login = l;
+            user.Password = pas;
+            user.Wage = w;
+            user.WageForH = wfh;
+            user.DateTime = dt;
+            user.Update();
+            return View(user);
+        }
+
         public IActionResult Privacy()
         {
             return View();
