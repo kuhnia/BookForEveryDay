@@ -70,6 +70,13 @@ namespace BookForEveryDay.Controllers
             return View();
         }
 
+        [HttpGet]
+        public IActionResult UpdateUser(string FirstName)
+        {
+            User us = db.GetUser(FirstName);
+            return View(us);
+        }
+
         public IActionResult Privacy()
         {
             return View();
