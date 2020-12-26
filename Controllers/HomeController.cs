@@ -28,6 +28,12 @@ namespace BookForEveryDay.Controllers
         }
 
         [HttpGet]
+        public IActionResult GetUser(int id)
+        {;
+            return View("AllUserInfo", db.GetUser(id));
+        }
+
+        [HttpGet]
         public IActionResult Index()
         {
             return View();
@@ -62,6 +68,13 @@ namespace BookForEveryDay.Controllers
         {
             db.RemoveUser(id);
             return View();
+        }
+
+        [HttpGet]
+        public IActionResult UpdateUser(string FirstName)
+        {
+            User us = db.GetUser(FirstName);
+            return View(us);
         }
 
         public IActionResult Privacy()

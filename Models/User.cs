@@ -8,6 +8,7 @@ namespace BookForEveryDay.Models
 {
     public class User
     {
+        WorkWithDB wb = new WorkWithDB();
         [Key]
         public int id;
         public string FirstName;
@@ -38,6 +39,34 @@ namespace BookForEveryDay.Models
             this.Wage = Wage;
             this.WageForH = WageForH;
             this.DateTime = DateTime;
-    }
+        }
+
+        public void Update()
+        {
+            wb.update(this);
+        }
+
+        public void StartOrStop()
+        {
+            if(Status == "work")
+            {
+                Status = "don`t work";
+                TimeSpan ts = System.DateTime.Now.Subtract(Convert.ToDateTime(DateTime));
+                Wage += ts.Hours * WageForH;
+            }
+            else
+            {
+                Status = "work";
+                DateTime = System.DateTime.Now.ToString("g");
+            }
+            Update();
+        }
+
+        public void Pay()
+        {
+            Wage = 0;
+            Update();
+        }
+
     }
 }
