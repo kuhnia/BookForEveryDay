@@ -71,7 +71,7 @@ namespace BookForEveryDay.Controllers
         }
 
         [HttpGet]
-        public IActionResult UpdateUser(string FirstName)
+        public IActionResult Update_User(string FirstName)
         {
             // User us = db.GetUser(2);
             //foreach (var item in usrs.users)
@@ -84,6 +84,25 @@ namespace BookForEveryDay.Controllers
             return View();
         }
 
+        [HttpPost]
+        public IActionResult Update_User(User user, string fn, string ln, string dob, string r, string d, string s, string p, string l, string pas, int w, int wfh, string dt)
+        {
+            user.FirstName = fn;
+            user.LastName = ln;
+            user.DayOfBirthsday = dob;
+            user.Role = r;
+            user.Department = d;
+            user.Status = s;
+            user.Position = p;
+            user.Login = l;
+            user.Password = pas;
+            user.Wage = w;
+            user.WageForH = wfh;
+            user.DateTime = dt;
+            user.Update();
+            return View(user);
+        }
+
         public IActionResult Privacy()
         {
             return View();
@@ -94,7 +113,15 @@ namespace BookForEveryDay.Controllers
         {
             
             UsersViewModel usrs = new UsersViewModel { users = db.GetUsers() };
-            ViewBag.User = db.Info_Of_User(user01);
+            //ViewBag.User = db.GetUser(user01);
+            //ViewBag.User = db.Info_Of_User(user01);
+            foreach(var item in usrs.users)
+            {
+                if(item.FirstName.Equals(user01))
+                {
+                    ViewBag.User = item;break;
+                }
+            }
             return View("AllUserInfo", usrs);
         }
 

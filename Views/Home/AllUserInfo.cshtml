@@ -22,13 +22,19 @@
                     }
                 </select>
             </div>
+            @if (ViewBag.User != null)
+            {
+        <div style="border: 1px solid #0094ff; padding: 10px;" class="text_area_user">
 
-            <div class="text_area_user">
-                <label class="info_label"><font class="text_style">Інформація про працівника</font></label>
-                <br /><br />
-                <input name="inp" class="user_info_input" type="text" />
-            </div>
-
+            <label class="info_label"><font class="text_style">Інформація про працівника</font></label>
+            <h5>First Name</h5>
+            <p>@ViewBag.User.FirstName</p>
+            <h5>Last Name</h5>
+            <p>@ViewBag.User.LastName</p>
+            <h5>Position</h5>
+            <p>@ViewBag.User.Position</p>
+        </div>
+            }
         </div>
 
         <div>
