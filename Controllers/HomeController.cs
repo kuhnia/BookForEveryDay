@@ -28,6 +28,12 @@ namespace BookForEveryDay.Controllers
         }
 
         [HttpGet]
+        public IActionResult GetUser(int id)
+        {;
+            return View("AllUserInfo", db.GetUser(id));
+        }
+
+        [HttpGet]
         public IActionResult Index()
         {
             return View();
