@@ -1,0 +1,108 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<form method="post" action="~/home/UpdateUser">
+    <div class="background_employee">
+
+        <div>           
+
+            <div class="info">
+
+                <label class="old_data" name="n_e"><font class="text_style">Попередні дані</font></label>
+                <br /><br />
+
+                <label class="f_name_employee_label"><font class="text_style">Імя</font></label>
+                <input name="fn" class="next_text_input" type="text" />
+                <br /><br />
+
+                <label class="l_name_employee_label"><font class="text_style">Прізвище</font></label>
+                <input name="ln" class="next_text_input" type="text" />
+                <br /><br />
+
+                <label class="b_day_employee_label"><font class="text_style">Дата народження</font></label>
+                <input name="dob" class="next_text_input" type="date" />
+                <br /><br />
+
+                <label class="role_employee_label"><font class="text_style">Роль</font></label>
+                <input name="r" class="next_text_input" type="text" />
+                <br /><br />
+
+                <label class="department_employee_label"><font class="text_style">Відділ</font></label>
+                <input name="d" class="next_text_input" type="text" />
+                <br /><br />
+
+                <label class="status_employee_label"><font class="text_style">Статус</font></label>
+                <input name="s" class="next_text_input" type="text" />
+                <br /><br />
+
+                <label class="position_employee_label"><font class="text_style">Посада</font></label>
+                <input name="p" class="next_text_input" type="text" />
+                <br /><br />
+
+                <label class="password_employee_label"><font class="text_style">Пароль</font></label>
+                <input name="pas" class="next_text_input" type="password" placeholder="Пароль" />
+                <br /><br />
+
+                <label class="login_employee_label"><font class="text_style">Логін</font></label>
+                <input name="l" class="next_text_input" type="text" />
+                <br /><br />
+
+                <label class="Wage_For_Hour"><font class="text_style">Оплата за годину</font></label>
+                <input name="wfh" class="next_text_input" type="text" />
+                <br /><br />
+            </div>
+
+            <div class="text_area">
+
+                <label class="old_data" name="n_e"><font class="text_style">Нові дані</font></label>
+                <br /><br />
+
+                <label class="f_name_employee_label"><font class="text_style">Імя</font></label>
+                <input name="fn" class="next_text_input" type="text" />
+                <br /><br />
+
+                <label class="l_name_employee_label"><font class="text_style">Прізвище</font></label>
+                <input name="ln" class="next_text_input" type="text" />
+                <br /><br />
+
+                <label class="b_day_employee_label"><font class="text_style">Дата народження</font></label>
+                <input name="dob" class="next_text_input" type="date" />
+                <br /><br />
+
+                <label class="role_employee_label"><font class="text_style">Роль</font></label>
+                <input name="r" class="next_text_input" type="text" />
+                <br /><br />
+
+                <label class="department_employee_label"><font class="text_style">Відділ</font></label>
+                <input name="d" class="next_text_input" type="text" />
+                <br /><br />
+
+                <label class="status_employee_label"><font class="text_style">Статус</font></label>
+                <input name="s" class="next_text_input" type="text" />
+                <br /><br />
+
+                <label class="position_employee_label"><font class="text_style">Посада</font></label>
+                <input name="p" class="next_text_input" type="text" />
+                <br /><br />
+
+                <label class="password_employee_label"><font class="text_style">Пароль</font></label>
+                <input name="pas" class="next_text_input" type="password" placeholder="Пароль" />
+                <br /><br />
+
+                <label class="login_employee_label"><font class="text_style">Логін</font></label>
+                <input name="l" class="next_text_input" type="text" />
+                <br /><br />
+
+                <label class="Wage_For_Hour"><font class="text_style">Оплата за годину</font></label>
+                <input name="wfh" class="next_text_input" type="text" />
+                <br /><br />
+
+            </div>
+        </div>
+        <input class="create" type="submit" value="Редагувати" />
+        @*<a class="user_button" asp-controller="Home" asp-action="AllUser"><font class="text_style">Всі працівники</font></a>*@
+    </div>
+
+</form>

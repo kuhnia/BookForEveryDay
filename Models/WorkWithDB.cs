@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using System.Data.SqlClient;//
+using System.Data.SqlClient;
+using BookForEveryDay.ViewModel;
 
 namespace BookForEveryDay.Models
 {
@@ -207,10 +208,10 @@ namespace BookForEveryDay.Models
             {
                 connection.Open();
                 SqlCommand command = new SqlCommand(sqlExpression, connection);
-                SqlDataReader dataReader = command.ExecuteReader();
-
-                //if()
+                SqlDataReader dataReader = command.ExecuteReader(); 
+                
             }
+            
             return employee;
         }
     }

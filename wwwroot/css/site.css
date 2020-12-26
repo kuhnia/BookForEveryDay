@@ -84,8 +84,10 @@ body {*/
     margin: 20px 700px 20px 700px;
 }
 
+.old_data {
+    margin: 20px 0px 20px 10px;
+}
 /*----------------------------------*/
-
 input[type="text"].text_input {
     background: transparent;
     border: 1px solid #000000;
@@ -190,6 +192,7 @@ textarea.area_text {
     margin: 10px 50px 0px 10px;
     padding: 3px;
 }
+
 
 .f_name_employee_label {
     margin: 0px 152px 1px 10px;

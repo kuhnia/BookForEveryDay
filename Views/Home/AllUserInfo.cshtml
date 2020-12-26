@@ -6,15 +6,15 @@
 
 
 
-<form method="post" action="~/home/AllUserInfo">
+<form method="post" action="~/home/IOU">
     <div class="background_employee">
 
         <div>
 
             <div class="user_info">
-                <select class="all_user_option" name="users">
+                <select class="all_user_option" name="user01">
                     <option>Всі працівники</option>
-                    @foreach (var item in Model.users)
+                    @foreach (var item in @Model.users)
                     {
                         <option>
                             @item.FirstName
@@ -26,14 +26,14 @@
             <div class="text_area_user">
                 <label class="info_label"><font class="text_style">Інформація про працівника</font></label>
                 <br /><br />
-                <input class="user_info_input" type="text" />
+                <input name="inp" class="user_info_input" type="text" />
             </div>
 
         </div>
 
         <div>
-            @*<input type="submit" class="back_button" value="Адмін">*@
-            <a class="user_button" asp-controller="Home" asp-action="AllUser"><font class="text_style">Переглянути</font></a>
+            <input  type="submit" class="user_button" value="Переглянути">
+            <a class="user_button" asp-controller="Home" asp-action="UpdateUser"><font class="text_style">Редагувати</font></a>
         </div>
 
     </div>
