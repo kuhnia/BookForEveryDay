@@ -73,8 +73,15 @@ namespace BookForEveryDay.Controllers
         [HttpGet]
         public IActionResult UpdateUser(string FirstName)
         {
-            User us = db.GetUser(FirstName);
-            return View(us);
+            // User us = db.GetUser(2);
+            //foreach (var item in usrs.users)
+            //{​​​​
+            //    if (item.FirstName.Equals(user01))
+            //    {​​​​
+            //        ViewBag.User = item; break;
+            //    }​​​​
+            //}​​​​
+            return View();
         }
 
         public IActionResult Privacy()
@@ -102,11 +109,11 @@ namespace BookForEveryDay.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
-        [HttpGet]
-        public IActionResult UpdateUser()
-        {
-            return View("Update_User");
-        }
+    //    [HttpGet]
+    //    public IActionResult UpdateUser()
+    //    {
+    //        return View("Update_User");
+    //    }
 
     }
 }

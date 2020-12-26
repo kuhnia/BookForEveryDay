@@ -200,7 +200,7 @@ namespace BookForEveryDay.Models
 
 
 
-        public User Info_Of_User()
+        public User Info_Of_User(string user01)
         {
             string sqlExpression = $"SELECT * FROM Users";
             User employee = null;
