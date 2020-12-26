@@ -73,15 +73,17 @@ namespace BookForEveryDay.Controllers
         [HttpGet]
         public IActionResult Update_User(string FirstName)
         {
+            User us = new User();
+            UsersViewModel usrs = new UsersViewModel { users = db.GetUsers() };
             // User us = db.GetUser(2);
-            //foreach (var item in usrs.users)
-            //{​​​​
-            //    if (item.FirstName.Equals(user01))
-            //    {​​​​
-            //        ViewBag.User = item; break;
-            //    }​​​​
-            //}​​​​
-            return View();
+            foreach (var item in usrs.users)
+            {
+                if (item.FirstName.Equals(FirstName))
+                {
+                    us = item; break;
+                }
+            }
+            return View("Update_User", us);
         }
 
         [HttpPost]

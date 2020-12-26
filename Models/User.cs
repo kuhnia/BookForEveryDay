@@ -23,6 +23,10 @@ namespace BookForEveryDay.Models
         public int Wage;
         public int WageForH;
         public string DateTime;
+        public User()
+        {
+                
+        }
 
         public User(int id, string FirstName, string LastName, string DayOfBirthsday, string Role, string Department, string Status, string Position, string Login, string Password, int Wage, int WageForH, string DateTime)
         {
