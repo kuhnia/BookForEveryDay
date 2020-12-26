@@ -39,11 +39,11 @@ namespace BookForEveryDay.Controllers
             return View("AllUserInfo");
         }
        
-        [HttpGet]
-        public IActionResult Create()
-        {
-            return View();
-        }
+        //[HttpGet]
+        //public IActionResult Create()
+        //{
+        //    return View();
+        //}
         [HttpPost]
         public IActionResult Create(string fn, string ln, string dob, string r, string d, string s, string p, string l, string pas, int w, int wfh, string dt)
         {
@@ -69,6 +69,15 @@ namespace BookForEveryDay.Controllers
             return View();
         }
 
+        [HttpPost]
+        public IActionResult IOU (string user01)
+        {
+            
+            UsersViewModel usrs = new UsersViewModel { users = db.GetUsers() };
+            ViewBag.User = db.Info_Of_User(user01);
+            return View("AllUserInfo", usrs);
+        }
+
         //public IActionResult View_info()
         //{           
         //    return View();
@@ -79,5 +88,12 @@ namespace BookForEveryDay.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+        [HttpGet]
+        public IActionResult UpdateUser()
+        {
+            return View("Update_User");
+        }
+
     }
 }

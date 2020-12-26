@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using System.Data.SqlClient;//
+using System.Data.SqlClient;
+using BookForEveryDay.ViewModel;
 
 namespace BookForEveryDay.Models
 {
@@ -113,18 +114,18 @@ namespace BookForEveryDay.Models
         }
 
 
-        public User Info_Of_User()
+        public User Info_Of_User(string users)
         {
-            string sqlExpression = $"SELECT * FROM Users";
-            User employee = null;
-            using(SqlConnection connection = new SqlConnection (connectionString))
+            string sqlExpression = $"SELECT id FROM Users";
+            User employee = GetUsers()[1];
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
                 SqlCommand command = new SqlCommand(sqlExpression, connection);
-                SqlDataReader dataReader = command.ExecuteReader();
-
-                //if()
+                SqlDataReader dataReader = command.ExecuteReader(); 
+                
             }
+            
             return employee;
         }
     }
